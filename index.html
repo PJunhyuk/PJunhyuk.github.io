@@ -17,17 +17,6 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-92632505-1', 'auto');
       ga('send', 'pageview');
-
-      function content_print(){
-        var initBody = document.body.innerHTML;
-        window.onbeforeprint = function(){
-            document.body.innerHTML = document.getElementById('main-print').innerHTML;
-        }
-        window.onafterprint = function(){
-            document.body.innerHTML = initBody;
-        }
-        window.print();
-    }
     </script>
     <style>
     @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -50,29 +39,13 @@
     h6 {
       margin-top: 30px;
     }
-
-    @media print {
-      .a4 {
-        page-break-after: always;
-      }
-      body {
-        border: 0;
-        /* margin: 0;
-        padding: 0; */
-      }
-    }
-    @page {
-      size: a4;
-      page-break-after: always;
-    }
     </style>
   </head>
   <body>
     <div class="container">
-      <button class="btn btn-default" type="button" onclick="javascript: content_print();">PRINT</button>
-      <a class="btn btn-primary" href="https://PJunhyuk.github.io/blog">blog</a>
-      <div id="main-print">
-        <div class="a4">
+      <a class="btn btn-primary" href="https://github.com/PJunhyuk/PJunhyuk.github.io/blob/master/PJunhyuk_resume_190830.pdf">Resume</a>
+      <div>
+        <div>
           <h1>박준혁 <small> Park Jun Hyuk</small></h1>
           <hr/>
 
@@ -112,7 +85,7 @@
           </ul>
         </div>
 
-        <div class="a4">
+        <div>
           <h6>멘토링</h6>
           <ul>
             <li>강원창조경제혁신센터 <a href="https://ccei.creativekorea.or.kr/gangwon/custom/notice_view.do?no=12863&div_code=&rnum=576&pn=3&kind=my&sPtime=now&sMenuType=&pagePerContents=8&cmntySeqNum=&menuSeqNum=&storyList=&sdate=&edate=&title=&contents=">스타트업 살롱; 11월의 크리스마스</a> 토크콘서트 연사 (2018.11.)</li>
@@ -152,7 +125,7 @@
           </ul>
         </div>
 
-        <div class="a4">
+        <div>
           <h6>연구</h6>
           <ul>
             <li><a href="https://github.com/PJunhyuk/people-counting-pose">Pose estimation-based tracking and counting of people in videos</a> (2017.07. ~ 2018.01.)</li>
